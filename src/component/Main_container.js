@@ -16,37 +16,35 @@ const Main_container = () => {
     }
 
     return (
-        <div className='main_container'>
-            <div className='handler'>
-                <div>
-                    <select onChange={(e) => setFont_size(e.target.value)}>
-                        <option value="">--set font size--</option>
-                        <option value="14px">14px</option>
-                        <option value="16px">16px</option>
-                        <option value="18px">18px</option>
-                        <option value="20px">20px</option>
-                    </select>
+        <div className='container_wrap'>
+            <div className='main_container'>
+                <div className='handler'>
+                    <div>
+                        <select onChange={(e) => setFont_size(e.target.value)}>
+                            <option value="">--set font size--</option>
+                            <option value="14px">14px</option>
+                            <option value="16px">16px</option>
+                            <option value="18px">18px</option>
+                            <option value="20px">20px</option>
+                        </select>
+                    </div>
+                    <button>play</button>
                 </div>
-                <button>play</button>
-            </div>
-            <div className='monaco_editor'>
-                <Editor
-                    height="100%"
-                    width="95%"
-                    defaultLanguage="c"
-                    defaultValue="// some comment"
-                    onMount={handleEditorDidMount}
-                    options={{
-                        scrollBeyondLastLine: false,
-                        fontSize: font_size + 'px'
-                    }}
-                    theme="vs-dark"
-                />
-            </div>
-            <div className='run_result'>
-                <div style={{ fontSize: font_size }}>
-                    여기에 결과값을 불러올 겁니다.
+                <div className='monaco_editor'>
+                    <Editor
+                        defaultLanguage="c"
+                        defaultValue="// some comment"
+                        onMount={handleEditorDidMount}
+                        options={{
+                            scrollBeyondLastLine: false,
+                            fontSize: font_size + 'px'
+                        }}
+                        theme="vs-dark"
+                    />
                 </div>
+            </div>
+            <div className='result_container'>
+                <p>result</p>
             </div>
         </div>
     );
