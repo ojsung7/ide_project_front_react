@@ -29,6 +29,8 @@ main{
 .main_container{
     width: 70%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sub_container{
@@ -88,4 +90,45 @@ main{
 
 .explorer>.files>.file p{
     margin-left: 7px;
+}
+
+.handler{
+    height: 8%;
+    width: 95%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.handler button{
+    color: white;
+    background-color: rgba(117, 128, 119, 0.997);
+    border: none;
+    padding: 5px 3rem;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.monaco_editor{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.run_result{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+}
+.run_result>div{
+    width: 93%;
+    height: 100%;
+    background-color: rgba(117, 128, 119, 0.997);
+    border-radius: 15px;
+    padding: 1rem;
+    color: white;
 }
